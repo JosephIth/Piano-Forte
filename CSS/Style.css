@@ -43,14 +43,29 @@ html body {
     margin: center ;
 }
 
-#carousel {
+#carouselExampleAutoplaying {
+    margin-top: 20px !important;
     background-color: #2D2F2E;
 }
 
 .img-Carou {
-    height: 500px;
-    width: 70%;
+    height: 400px;
+    width: 76%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
+}
+
+.fi {
+    padding-top: 10px;
+    position: relative;
+    left: 50%;
+    font-size: 40px;
+    color: #FFBF00;
+}
+
+.redesLink {
+    
+    text-decoration: none;
 }
