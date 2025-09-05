@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Caveat';
-    src: url('fonts/Caveat-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Lato';
+    src: url('fonts/Lato/Lato-Light.ttf') format('truetype');
 }
 
 body {
@@ -8,12 +8,12 @@ body {
 }
 
 #TextoPrincipal {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lato', cursive;
     color: #E8E8E8;
 }
 
 #TextoSecundario {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lato', cursive;
     color: #FFAF14;
 }
 

@@ -7,15 +7,15 @@ Caveat is a variable font with this axis:
   wght
 
 This means all the styles are contained in a single file:
-  Caveat-VariableFont_wght.ttf
+  Caveat/Caveat-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Caveat:
-  static/Caveat-Regular.ttf
-  static/Caveat-Medium.ttf
-  static/Caveat-SemiBold.ttf
-  static/Caveat-Bold.ttf
+  Caveat/static/Caveat-Regular.ttf
+  Caveat/static/Caveat-Medium.ttf
+  Caveat/static/Caveat-SemiBold.ttf
+  Caveat/static/Caveat-Bold.ttf
 
 Get started
 -----------
