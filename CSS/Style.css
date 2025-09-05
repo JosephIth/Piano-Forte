@@ -8,8 +8,8 @@
     src: url('fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
 }
 
-html {
-    background-color: #302D2B;
+html body {
+    background-color: #2D2F2E;
 }
 
 #TextoPrincipal {
@@ -19,12 +19,21 @@ html {
 
 #TextoSecundario {
     font-family: 'Lato', cursive;
-    color: #FFAF14;
+    color: #FFBF00;
 }
 
 #navBar
 {
-    background-color: #302D2B !important;
+    background-color: #2D2F2E !important;
+    font-family: 'Caveat', cursive;
+}
+
+#navBar .btn{
+    color: #FFBF00 !important;
+    border-color: #FFBF00 !important;
+} #navBar .btn:hover{
+    background-color: #FFBF00 !important;
+    color: #2D2F2E !important;
 }
 
 #icono img {
@@ -34,9 +43,13 @@ html {
     margin: center ;
 }
 
+#carousel {
+    background-color: #2D2F2E;
+}
+
 .img-Carou {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
