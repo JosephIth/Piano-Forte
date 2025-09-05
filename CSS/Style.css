@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.google.com/specimen/Caveat');
-body{
-    
-   div{ background-color: #302D2B; 
-   }
-   #TextoPrincipal{
-    font-family:Lato; color: #E8E8E8;}
-   #TextoSecundario{
-    font-family:Caveat; color: #FFAF14;}
+@font-face {
+    font-family: 'Caveat';
+    src: url('fonts/Caveat-VariableFont_wght.ttf') format('truetype');
+}
 
-    
+body {
+    background-color: #302D2B;
+}
+
+#TextoPrincipal {
+    font-family: 'Caveat', cursive;
+    color: #E8E8E8;
+}
+
+#TextoSecundario {
+    font-family: 'Caveat', cursive;
+    color: #FFAF14;
+}
+
+.img-Carou {
+    height: 200px;
 }
