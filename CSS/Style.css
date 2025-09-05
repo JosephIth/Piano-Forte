@@ -8,7 +8,7 @@
     src: url('fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
 }
 
-body {
+html {
     background-color: #302D2B;
 }
 
@@ -20,6 +20,18 @@ body {
 #TextoSecundario {
     font-family: 'Lato', cursive;
     color: #FFAF14;
+}
+
+#navBar
+{
+    background-color: #302D2B !important;
+}
+
+#icono img {
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin: center ;
 }
 
 .img-Carou {
