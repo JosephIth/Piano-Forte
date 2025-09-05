@@ -22,6 +22,10 @@ html body {
     color: #FFBF00;
 }
 
+
+
+
+/*NAVBAR E ITEMS DE LA MISMA*/
 #navBar
 {
     background-color: #2D2F2E !important;
@@ -40,7 +44,20 @@ html body {
     margin-right: 20px;
     font-size: 30px;
 }
+/*FIN DE LA NAVBAR E ITEMS DE LA MISMA*/
 
+/*BOTON DESPEGABLE DEL NAV*/
+.dropdown-toggle:focus{
+    color: #FFBF00 !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.dropdown-item:active{
+    background-color: #FFBF00 !important;
+}
+/*FIN DEL BOTON DESPEGABLE DEL NAV*/
+
+/**BOTON RESPONSIVE DEL NAV*/
 .navbar-toggler {
     border: 2px solid #FFBF00 !important;
     color: #ffff !important;
@@ -49,8 +66,9 @@ html body {
 .navbar-toggler-icon {
     color: aliceblue !important;
 }
+/**FIN DEL BOTON RESPONSIVE DEL NAV*/
 
-
+/*CLASES BTN DEL NAV PARA EL FORMULARIO DE BUSCAR*/
 #navBar .btn{
     color: #FFBF00 !important;
     border-color: #FFBF00 !important;
@@ -58,6 +76,22 @@ html body {
     background-color: #FFBF00 !important;
     color: #2D2F2E !important;
 }
+/*FIN DE LAS CLASES BTN DEL NAV PARA EL FORMULARIO DE BUSCAR*/
+
+/*INICIO DE BOTOM CUENTA
+.nav-itemUser{}
+*/
+
+.nav-link i{
+    font-size: 25px;
+    margin-right: 5px;
+    color: #ffffff;
+} .nav-link:hover i{
+    color: #FFBF00;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+/*FIN DE IBOTOM CUENTA*/
 
 #icono img {
     height: 120px;
@@ -65,6 +99,8 @@ html body {
     margin-top: 10px;
     margin: center ;
 }
+
+
 
 #carouselExampleAutoplaying {
     margin-top: 20px !important;
@@ -88,13 +124,13 @@ html body {
     margin-top: 20px;
 }
 
-.fi {
+.redes .fi {
     padding-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 40px;
     color: #FFBF00;
-} .fi:hover {
+}.redes .fi:hover {
     color: #E8E8E8;
     transform: scale(1.2);
     transition: all 0.3s ease;

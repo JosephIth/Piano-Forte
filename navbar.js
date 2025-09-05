@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",() => {
             <a class="nav-link active" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Conocenos</a>
+            <a class="nav-link" href="#">Conócenos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded",() => {
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Cursos</a>
+          <li class="nav-item nav-itemUser">
+            <a class="nav-link" href=""><i class="fi fi-br-portrait"></i> Mi Cuenta</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
