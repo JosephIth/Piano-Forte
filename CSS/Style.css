@@ -3,12 +3,17 @@
     src: url('fonts/Lato/Lato-Light.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Caveat';
+    src: url('fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
+}
+
 body {
     background-color: #302D2B;
 }
 
 #TextoPrincipal {
-    font-family: 'Lato', cursive;
+    font-family: 'Caveat', cursive;
     color: #E8E8E8;
 }
 
