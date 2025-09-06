@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forte & Piano</title>
+        <link rel="icon" href="Imagenes/nav-icon/icono.png" type="png">
+
+        <!--Sheet CSS-->
+        <link rel="stylesheet"  href="CSS/Style.css">
+        <!--Sheet CSS-->
+
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--Jquery-->
+
+        <!--Iconos redes-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+        <!--Iconos redes-->
+        <!--Iconos Users-->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+        <!--Iconos Users-->
+
+        <!--BootStrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--Bootstrap-->
+    </head>
+
+    <body>
+          <!---NAV BAR IMPORTADA CON SCRIPT-->
+            <div id="navbar-container"></div>
+          <!---NAV BAR IMPORTADA CON SCRIPT-->
+
+        <main class="container container-registro">
+            <section class="form">
+            <h2>Crear cuenta</h2>
+            <div class="registro-grid">
+                <div>
+                <label class="form-label" for="regNombre">Nombre</label>
+                <input id="regNombre" type="text" autocomplete="name" class="form-control">
+                <label class="form-label" for="regEmail">Email</label>
+                <input id="regEmail" type="email" autocomplete="email" class="form-control">
+                <label class="form-label" for="regTel">Teléfono</label>
+                <input id="regTel" type="tel" autocomplete="tel" class="form-control">
+                <label class="form-label" for="regPass">Contraseña</label>
+                <input id="regPass" type="password" autocomplete="new-password" class="form-control">
+                <label class="form-label" for="regPass2">Repite contraseña</label>
+                <input id="regPass2" type="password" autocomplete="new-password" class="form-control">
+                <button class="btn btn-success" id="btnRegistro">Registrarme</button>
+                <p id="regMsg" class="error"></p>
+                <p class="help">Al registrarte aceptas términos del curso.</p>
+                </div>
+                <div>
+                <p><strong>Ventajas</strong></p>
+                <ul>
+                    <li>Seguimiento de pedidos</li>
+                    <li>Historial de compras</li>
+                    <li>Ofertas personalizadas</li>
+                </ul>
+                </div>
+            </div>
+            </section>
+
+        </main>
+            
+        <!--BootStrap, NO ESCRIBIR NADA MÁS ABAJO-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <!--navbarJS, NO ESCRIBIR NADA MÁS ABAJO-->
+        <script src="navbar.js"></script>
+
+    </body>
+
+
+
+</html>

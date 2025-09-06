@@ -8,8 +8,8 @@
     src: url('fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
 }
 
-body {
-    background-color: #302D2B;
+html body {
+    background-color: #2D2F2E;
 }
 
 #TextoPrincipal {
@@ -19,13 +19,163 @@ body {
 
 #TextoSecundario {
     font-family: 'Lato', cursive;
-    color: #FFAF14;
+    color: #FFBF00;
+}
+
+
+
+
+/*NAVBAR E ITEMS DE LA MISMA*/
+#navBar
+{
+    background-color: #2D2F2E !important;
+    font-family: 'Lato', cursive;
+    border-bottom: #FFBF00 solid 1px;
+}
+.nav-link {
+    color: #E8E8E8 !important;
+} .nav-link:hover{
+    color: #FFBF00 !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.nav-item{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+/*FIN DE LA NAVBAR E ITEMS DE LA MISMA*/
+
+/*BOTON DESPEGABLE DEL NAV*/
+.dropdown-toggle:focus{
+    color: #FFBF00 !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.dropdown-item:active{
+    background-color: #FFBF00 !important;
+}
+/*FIN DEL BOTON DESPEGABLE DEL NAV*/
+
+/**BOTON RESPONSIVE DEL NAV*/
+#navBar-T {
+    color: #ffff;
+    background-color: #FFBF00 ;
+}  
+.navbar-toggler-icon {
+    color: aliceblue !important;
+}
+/**FIN DEL BOTON RESPONSIVE DEL NAV*/
+
+/*CLASES BTN DEL NAV PARA EL FORMULARIO DE BUSCAR*/
+#navBar .btn{
+    color: #FFBF00 !important;
+    border-color: #FFBF00 !important;
+} #navBar .btn:hover{
+    background-color: #FFBF00 !important;
+    color: #2D2F2E !important;
+}
+/*FIN DE LAS CLASES BTN DEL NAV PARA EL FORMULARIO DE BUSCAR*/
+
+/*INICIO DE BOTOM CUENTA
+.nav-itemUser{}
+*/
+
+.nav-link i{
+    font-size: 25px;
+    margin-right: 5px;
+    color: #ffffff;
+} .nav-link:hover i{
+    color: #FFBF00;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+/*FIN DE IBOTOM CUENTA*/
+
+/*NOTA: TENER EN CONSIDERACION MULTIPLES TAMAÑOS EN LA BARRA NAV SEGUN EL DOCUMENTO HTML AL CUAL SE INGRESE*/
+#icono img {
+    height: 75px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin: center ;
+}
+
+
+
+#carouselExampleAutoplaying {
+    margin-top: 20px !important;
+    background-color: #2D2F2E;
 }
 
 .img-Carou {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 76%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
+}
+
+
+/* APARTADO DE REDES */
+.redes {
+    display: flexbox;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redes .fi {
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 40px;
+    color: #FFBF00;
+}.redes .fi:hover {
+    color: #E8E8E8;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.redesLink {
+    
+    text-decoration: none;
+}
+/*APARTADO DE REDES FIN*/
+
+
+
+
+
+/*-----------------------------------------REGISTRO---------------------------------------*/
+
+
+
+.container-registro {
+    background-color: #2D2F2E;
+    color: #fff;
+    border: 2px solid #FFBF00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-registro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFBF00;
+}
+
+.container-registro .registro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    color: #fff;
+}
+#btnRegistro {
+    background-color: #FFBF00;
+    color: #2D2F2E;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
