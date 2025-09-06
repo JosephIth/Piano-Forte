@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded",() => {
     <div class="container-fluid">
       <div id="icono"><img src="Imagenes/nav-icon/icono.png"></div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" id="navBar-T" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="Forte&Piano.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Conócenos</a>
@@ -27,9 +27,19 @@ document.addEventListener("DOMContentLoaded",() => {
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item nav-itemUser">
-            <a class="nav-link" href=""><i class="fi fi-br-portrait"></i> Mi Cuenta</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Ingresar.html">Ingresar</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registrarse</a>
+          </li>
+
+          <li class="nav-item nav-itemUser">
+            <a class="nav-link" href="#"><i class="fi fi-br-portrait"></i>Perfil</a>
+          </li>
+
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="¿Que deseas buscar?" aria-label="Search"/>

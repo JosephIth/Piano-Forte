@@ -42,7 +42,7 @@ html body {
 .nav-item{
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 /*FIN DE LA NAVBAR E ITEMS DE LA MISMA*/
 
@@ -58,10 +58,9 @@ html body {
 /*FIN DEL BOTON DESPEGABLE DEL NAV*/
 
 /**BOTON RESPONSIVE DEL NAV*/
-.navbar-toggler {
-    border: 2px solid #FFBF00 !important;
-    color: #ffff !important;
-    background-color: #FFBF00 !important;
+#navBar-T {
+    color: #ffff;
+    background-color: #FFBF00 ;
 }  
 .navbar-toggler-icon {
     color: aliceblue !important;
@@ -93,8 +92,9 @@ html body {
 }
 /*FIN DE IBOTOM CUENTA*/
 
+/*NOTA: TENER EN CONSIDERACION MULTIPLES TAMAÑOS EN LA BARRA NAV SEGUN EL DOCUMENTO HTML AL CUAL SE INGRESE*/
 #icono img {
-    height: 120px;
+    height: 75px;
     margin-left: 20px;
     margin-top: 10px;
     margin: center ;
