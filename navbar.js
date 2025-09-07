@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",() => {
           </li>
 
           <li class="nav-item nav-itemUser">
-            <a class="nav-link" href="#"><i class="fi fi-br-portrait"></i>Perfil</a>
+            <a class="nav-link" href="Perfil.html"><i class="fi fi-br-portrait"></i>Perfil</a>
           </li>
 
         </ul>
