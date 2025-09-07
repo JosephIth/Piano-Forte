@@ -147,15 +147,17 @@ video {
 /*APARTADO DE REDES FIN*/
 
 .info {
-
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
     margin-top: 20px;
     font-family: 'Lato', cursive;
     color: #E8E8E8;
     background-color: #3c3f3e;
     }
-
+    
 .info h2 {
     font-family: 'Lato', cursive;
     font-size: 40px;
@@ -166,8 +168,12 @@ video {
     color: #FFBF00;
     transform:rotate(-3deg) scale(1.1);
     transition: all 0.3s ease;
-
 }
+
+.Textoconocenos p {
+    text-align: justify;
+    text-justify: inter-word; 
+    font-size: 20px;}
 
 .info-box {
     background-color: #2D2F2E;
@@ -177,8 +183,8 @@ video {
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-right: 25%;
+    margin-left: 10%;
 }
 
 .container-videoPrueba {
