@@ -63,6 +63,21 @@ function setupRegistro(){
   });
 }
 
+//LOGIN USUARO
+function setupLogin(){
+  const btn = $('#btnLogin'); if(!btn) return;
+  btn.addEventListener('click', ()=>{
+    const email = $('#logEmail').value.trim();
+    const pass = $('#logPass').value;
+    const msg = $('#loginMsg');
+    if(!validarEmail(email)) return msg.textContent='Correo inválido';
+    const users = store.get('users',{});
+    if(!users[email] || users[email].pass!==pass){ msg.textContent='Credenciales incorrectas'; return; }
+    store.set('session',{email});
+    location.href='Perfil.html';
+  });
+}
+
 
 
 //CORRER FUNCIONES
@@ -71,5 +86,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   setupPerfil();
   setupRegistro();
+  setupLogin();
 
 });
