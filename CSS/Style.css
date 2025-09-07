@@ -20,9 +20,13 @@ html body {
 #TextoSecundario {
     font-family: 'Lato', cursive;
     color: #FFBF00;
+    
 }
 
-
+video {
+  display: block;
+  margin: auto;
+}
 
 
 /*NAVBAR E ITEMS DE LA MISMA*/
@@ -179,3 +183,5 @@ html body {
     padding: 10px 20px;
     border-radius: 5px;
 }
+
+
