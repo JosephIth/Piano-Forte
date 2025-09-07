@@ -146,6 +146,72 @@ video {
 }
 /*APARTADO DE REDES FIN*/
 
+.info {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Lato', cursive;
+    color: #E8E8E8;
+    background-color: #3c3f3e;
+    }
+
+.info h2 {
+    font-family: 'Lato', cursive;
+    font-size: 40px;
+    text-align: center; 
+    color: #ffffff;
+    margin-bottom: 20px;
+} .info h2:hover {
+    color: #FFBF00;
+    transform:rotate(-3deg) scale(1.1);
+    transition: all 0.3s ease;
+
+}
+
+.info-box {
+    background-color: #2D2F2E;
+    color: #fff;
+    border: 2px solid #FFBF00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.container-videoPrueba {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid #454545;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+.container-videoPrueba h2 {
+    font-family: 'Lato', cursive;
+    color: #FFBF00;
+    text-align: center;
+}
+
+.container-videoPrueba p {
+    font-family: 'Lato', cursive;
+    color: #E8E8E8;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.container-videoPrueba video {
+    border: 2px solid #ffffff;
+
+}
+
 
 
 
@@ -160,6 +226,12 @@ video {
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.formulario-registro { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .container-registro h2 {
@@ -181,5 +253,66 @@ video {
     padding: 10px 20px;
     border-radius: 5px;
 }
+
+
+/*-----------------------------------------INGRESAR---------------------------------------*/
+.container-ingresar {
+    background-color: #2D2F2E;
+    color: #fff;
+    border: 2px solid #FFBF00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#btnLogin {
+    background-color: #FFBF00;
+    color: #2D2F2E;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+/*-----------------------------------------PERFIL---------------------------------------*/
+.container-perfil {
+    background-color: #2D2F2E;
+    color: #fff;
+    border: 2px solid #FFBF00;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#btnGuardarPerfil {
+    background-color: #FFBF00;
+    color: #2D2F2E;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+
+/*-----------------------------------------FOOTER---------------------------------------*/
+
+footer {
+    background-color: #2D2F2E;
+    color: #E8E8E8;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 1px solid #FFBF00;
+}
+
+
 
 
