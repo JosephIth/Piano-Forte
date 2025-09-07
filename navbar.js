@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",() => {
             <a class="nav-link active" aria-current="page" href="Forte&Piano.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Conócenos</a>
+            <a class="nav-link" href="#pqElegirF&P">Conócenos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
