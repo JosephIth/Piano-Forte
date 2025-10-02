@@ -6,6 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import './App.css'
+
 
 function App() {
 
@@ -13,37 +15,37 @@ function App() {
     <Navbar id = "nav_Bar" expand="lg" className="bg-body-tertiary">
       <Container fluid id="nav_Container">
         <Navbar.Brand href="#"><img src="Imagenes/nav-icon/icono.png" alt="Girl in a jacket" width="120px" height="80px"/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll" id="togglerNav"/>
         <Navbar.Collapse id="navbarScroll">
           <Nav
+            id = "nav_Nav"
             className="me-auto my-2 my-lg-0"
 
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link href="#action2">Conocenos</Nav.Link>
+            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Instrumentos</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                Equipos de Sonido
               </NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                Accesorios
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="#">
+              Cuenta
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Busqueda"
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button id="Boton" variant="outline-success">Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
