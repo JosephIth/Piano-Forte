@@ -9,15 +9,16 @@
 
 #nav_Container {
   background-color: #2D2F2E;
+  padding-bottom: 10px;
 
-
-    
 }
 
 
 
 #nav_Nav *{
   margin-right: 30px;
+
+
   font-size: 22px;
   
   background-color: #2D2F2E;

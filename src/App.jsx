@@ -7,14 +7,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import './App.css'
+import { Carousel } from 'bootstrap';
+import CarouselPage from './CarouselPage';
 
 
 function App() {
 
   return (
+    <div> 
     <Navbar id = "nav_Bar" expand="lg" className="bg-body-tertiary">
       <Container fluid id="nav_Container">
-        <Navbar.Brand href="#"><img src="Imagenes/nav-icon/icono.png" alt="Girl in a jacket" width="120px" height="80px"/></Navbar.Brand>
+        <Navbar.Brand href="#" className="brand-center"><img src="/icono.png" alt="icono" width="120px" height="80px"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" id="togglerNav"/>
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -50,6 +53,14 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+    <CarouselPage/>
+
+    </div>
+
+
+
+    
   )
 }
 
