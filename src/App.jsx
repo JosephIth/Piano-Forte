@@ -9,10 +9,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './App.css'
 import { Carousel } from 'bootstrap';
 import CarouselPage from './CarouselPage';
+import Album from "./components/Album"
+import Instrumento from "./components/Instrumento"
 
 
 function App() {
 
+  
   return (
     <div> 
     <Navbar id = "nav_Bar" expand="lg" className="bg-body-tertiary">
@@ -29,7 +32,8 @@ function App() {
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Conocenos</Nav.Link>
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Instrumentos</NavDropdown.Item>
+              <NavDropdown.Item href="Album.jsx">Albumes</NavDropdown.Item>
+              
               <NavDropdown.Item href="#action4">
                 Equipos de Sonido
               </NavDropdown.Item>
@@ -57,11 +61,8 @@ function App() {
     <CarouselPage/>
 
     </div>
-
-
-
-    
   )
+  
 }
 
 export default App
