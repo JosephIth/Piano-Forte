@@ -1,64 +1,54 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { useCart } from './hooks/useCart';
+import Header from './components/Header';
+import { useState } from "react"
 import './App.css'
 import { Carousel } from 'bootstrap';
 import CarouselPage from './CarouselPage';
-import Album from "./components/Album"
 import Instrumento from "./components/Instrumento"
+import { db } from "./data/db"
 
 
 function App() {
 
+  //const [data, setData] = useState(db)
+
+    const{data,
+        cart,
+        addToCart,
+        removeFromCart,
+        decreaseQuantity,
+        increaseQuantity,
+        clearCart,
+        isEmpty,
+        cartTotal} = useCart()
   
   return (
     <div> 
-    <Navbar id = "nav_Bar" expand="lg" className="bg-body-tertiary">
-      <Container fluid id="nav_Container">
-        <Navbar.Brand href="#" className="brand-center"><img src="/icono.png" alt="icono" width="120px" height="80px"/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" id="togglerNav"/>
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            id = "nav_Nav"
-            className="me-auto my-2 my-lg-0"
 
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Conocenos</Nav.Link>
-            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="Album.jsx">Albumes</NavDropdown.Item>
-              
-              <NavDropdown.Item href="#action4">
-                Equipos de Sonido
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Accesorios
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#">
-              Cuenta
-            </Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Busqueda"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button id="Boton" variant="outline-success">Buscar</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <Header 
+      cart = {cart}
+      removeFromCart={removeFromCart}
+      increaseQuantity={increaseQuantity}
+      decreaseQuantity={decreaseQuantity}
+      clearCart={clearCart}
+      isEmpty={isEmpty}
+      cartTotal={cartTotal}
+     />
+      <CarouselPage/>
 
-    <CarouselPage/>
+      <main className="container-xl mt-5">
+        <h2 className="text-center">Nuestra Colección</h2>
+        <div className="row mt-5">
+        {data.map((instrumento) =>(
+          <Instrumento
+            key={instrumento.id}
+            instrumento = {instrumento}
+            addToCart = {addToCart}
+          />
+        ))} 
+        </div>       
+      </main>
 
     </div>
   )
