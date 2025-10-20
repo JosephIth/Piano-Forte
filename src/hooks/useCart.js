@@ -19,7 +19,7 @@ export const useCart = () => {
     const [data] = useState(db)//acá db es un archivo local
     const [cart, setCart] = useState(initialCart)
 
-    const MAX_ITEMS = 5
+
     const MIN_ITEMS = 1
 
 
@@ -31,7 +31,7 @@ export const useCart = () => {
     function addToCart(item) {
         const itemExists = cart.findIndex(instrumento => instrumento.id === item.id)
         if (itemExists >= 0) {//Ya existe en el Carrito
-            if (cart[itemExists].quantity >= MAX_ITEMS) return
+            if (cart[itemExists].quantity >= instrumento.stock) return
             const updateCart = [...cart]
             updateCart[itemExists].quantity++
             setCart(updateCart)
@@ -51,7 +51,7 @@ export const useCart = () => {
      */
     function increaseQuantity(id) {
         const updateCart = cart.map(item => {
-            if (item.id === id && item.quantity < MAX_ITEMS) {
+            if (item.id === id && item.quantity < item.stock) {
                 return {
                     ...item,//para mantener el elemento en el carro y aumentar su cantidad
                     quantity: item.quantity + 1

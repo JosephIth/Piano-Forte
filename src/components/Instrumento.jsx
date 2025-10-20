@@ -1,7 +1,7 @@
 
 export default function Instrumento({instrumento, addToCart}) {
     console.log(instrumento)
-    const { id, category, name, image,description,price} = instrumento
+    const { id, category, name, image,description,price, stock} = instrumento
 
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">
