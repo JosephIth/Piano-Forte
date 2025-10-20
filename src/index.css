@@ -1,3 +1,4 @@
+
 #nav_Bar {
   margin: 0%;
   padding: 0%;
@@ -49,4 +50,20 @@
 
 #togglerNav{
   background-color: #E6B325;
+}
+
+
+
+@media (max-width: 576px) {
+
+  .TextoCarousel{
+    background-color: #2c2c2b;
+    color: white;
+
+    border-radius: 3%;
+    padding: 10px;
+    margin-bottom: 25%;
+
+  }
+
 }

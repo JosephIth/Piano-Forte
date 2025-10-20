@@ -1,53 +1,93 @@
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import RegisterModal from './RegisterModal';
+import LoginModal from './LoginModal';
 
-export default function Header({cart,
+export default function Header({
+  cart,
   removeFromCart,
   increaseQuantity,
   decreaseQuantity,
   clearCart,
   isEmpty,
   cartTotal,
-  onCategorySelect // <-- nuevo prop
-}
-) {
+  onCategorySelect
+}) {
+    const [showRegister, setShowRegister] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
+    const [session, setSession] = useState(null)
+
+    useEffect(() => {
+        const savedSession = localStorage.getItem('session')
+        if (savedSession) {
+            setSession(JSON.parse(savedSession))
+        }
+    }, [])
+
+    const handleLogin = (userData) => {
+        setSession(userData)
+    }
+
+    const handleLogout = () => {
+        localStorage.removeItem('session')
+        setSession(null)
+    }
+
     return (
         <header>
-            <Navbar id = "nav_Bar" expand="lg" className="bg-body-tertiary">
+            <Navbar id="nav_Bar" expand="lg" className="bg-body-tertiary">
                 <Container fluid id="nav_Container">
-                    <Navbar.Brand href="#" className="brand-center"><img src="/icono.png" alt="icono" width="120px" height="80px"/></Navbar.Brand>
+                    <Navbar.Brand href="#" className="brand-center">
+                        <img src="/icono.png" alt="icono" width="120px" height="80px"/>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" id="togglerNav"/>
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            id = "nav_Nav"
-                            className="me-auto my-2 my-lg-0"
-
-                            navbarScroll
-                        >
-                            <Nav.Link href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('All') }}>Inicio</Nav.Link>
+                        <Nav id="nav_Nav" className="me-auto my-2 my-lg-0" navbarScroll>
+                            <Nav.Link href="#" onClick={(e) => { e.preventDefault(); onCategorySelect('Productos') }}>
+                                Inicio
+                            </Nav.Link>
                             <Nav.Link href="#action2">Conocenos</Nav.Link>
                             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Album') }}>Albumes</NavDropdown.Item>
-                            
-                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Instrumento') }}>
-                                Equipos de Sonido
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Accesorio') }}>
-                                Accesorios
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Productos') }}>
-                                Todos los Productos
-                            </NavDropdown.Item>                            
+                                <NavDropdown.Item onClick={() => onCategorySelect('Album')}>
+                                    Albumes
+                                </NavDropdown.Item>
+                                <NavDropdown.Item onClick={() => onCategorySelect('Instrumento')}>
+                                    Equipos de Sonido
+                                </NavDropdown.Item>
+                                <NavDropdown.Item onClick={() => onCategorySelect('Accesorio')}>
+                                    Accesorios
+                                </NavDropdown.Item>
+                                <NavDropdown.Item onClick={() => onCategorySelect('Productos')}>
+                                    Todos los Productos
+                                </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#">
-                            Cuenta
-                            </Nav.Link>
-                        
+                            
+                            {!session ? (
+                                <>
+                                    <Nav.Link onClick={() => setShowRegister(true)}>
+                                        Registro
+                                    </Nav.Link>
+                                    <Nav.Link onClick={() => setShowLogin(true)}>
+                                        Iniciar Sesión
+                                    </Nav.Link>
+                                </>
+                            ) : (
+                                <NavDropdown title={`Bienvenido, ${session.name}`} id="nav-dropdown">
+                                    <NavDropdown.Item>Mi Perfil</NavDropdown.Item>
+                                    <NavDropdown.Item>Mis Pedidos</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item onClick={handleLogout}>
+                                        Cerrar Sesión
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            )}
                         </Nav>
+
                         <div 
                         className="carrito"
                     >
@@ -131,6 +171,16 @@ export default function Header({cart,
 
             </Navbar>
 
+            <RegisterModal
+                show={showRegister}
+                onHide={() => setShowRegister(false)}
+            />
+            
+            <LoginModal
+                show={showLogin}
+                onHide={() => setShowLogin(false)}
+                onLogin={handleLogin}
+            />
         </header>
     )
 }
