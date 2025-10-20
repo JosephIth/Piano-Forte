@@ -11,7 +11,9 @@ export default function Header({cart,
   decreaseQuantity,
   clearCart,
   isEmpty,
-  cartTotal}
+  cartTotal,
+  onCategorySelect // <-- nuevo prop
+}
 ) {
     return (
         <header>
@@ -26,17 +28,20 @@ export default function Header({cart,
 
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Inicio</Nav.Link>
+                            <Nav.Link href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('All') }}>Inicio</Nav.Link>
                             <Nav.Link href="#action2">Conocenos</Nav.Link>
                             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="Album.jsx">Albumes</NavDropdown.Item>
+                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Album') }}>Albumes</NavDropdown.Item>
                             
-                            <NavDropdown.Item href="#action4">
+                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Instrumento') }}>
                                 Equipos de Sonido
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action5">
+                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Accesorio') }}>
                                 Accesorios
                             </NavDropdown.Item>
+                            <NavDropdown.Item href="#" onClick={(e) => { e.preventDefault(); onCategorySelect && onCategorySelect('Productos') }}>
+                                Todos los Productos
+                            </NavDropdown.Item>                            
                             </NavDropdown>
                             <Nav.Link href="#">
                             Cuenta

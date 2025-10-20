@@ -22,6 +22,19 @@ function App() {
         clearCart,
         isEmpty,
         cartTotal} = useCart()
+
+    // estado para la categoría seleccionada (All muestra todo)
+    const [selectedCategory, setSelectedCategory] = useState('Productos')
+
+    const handleCategorySelect = (category) => {
+      setSelectedCategory(category ?? 'Productos')
+    }
+
+    // filtrar productos según la categoría seleccionada
+    const visibleData = data.filter(item => {
+      if (selectedCategory === 'Productos' || !selectedCategory) return true
+      return item.category === selectedCategory
+    })
   
   return (
     <div> 
@@ -34,13 +47,14 @@ function App() {
       clearCart={clearCart}
       isEmpty={isEmpty}
       cartTotal={cartTotal}
+      onCategorySelect={handleCategorySelect}  // <-- nuevo prop
      />
       <CarouselPage/>
 
       <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección</h2>
+        <h2 className="text-center">{selectedCategory}</h2>
         <div className="row mt-5">
-        {data.map((instrumento) =>(
+        {visibleData.map((instrumento) =>(
           <Instrumento
             key={instrumento.id}
             instrumento = {instrumento}

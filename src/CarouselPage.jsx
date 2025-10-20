@@ -7,9 +7,7 @@ import Img3 from '/Imagenes/carousel3.webp';
 function CarouselPage() {
   return (
     <div>
-        <style>
 
-        </style>
         <Carousel >
             <Carousel.Item>
                 <img style=  {   {height: "60vh" }}
